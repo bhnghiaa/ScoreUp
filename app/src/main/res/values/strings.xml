@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">FulltestToeic</string>
+    <string name="hamburger_button_description">Hamburger Menu</string>
+    <string name="navigation_drawer_open">Mở menu</string>
+    <string name="navigation_drawer_close">Đóng menu</string>
+    <string name="hamburger_icon_description">Open menu</string>
+
+</resources>

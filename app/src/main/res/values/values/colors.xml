@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white1">#9ba4b5</color>
+    <color name="bgr">#6a5be2</color>
+    <color name="category">#e8a4fa</color>
+    <color name="click">#ff8fa3</color>
+    <color name="optionBgr">#00000056</color>
+    <color name="btn">#A5D7E8</color>
+    <color name="navigation_icon_color">#FF4081</color>
+    <color name="navigation_text_color">#333333</color>
+    <color name="navigation_background_color">#FFFFFF</color>
+</resources>
