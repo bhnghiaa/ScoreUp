@@ -19,21 +19,21 @@ public class MainActivityQuiz extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_main);
 
-//        Button btnStart = findViewById(R.id.btn_start);
-//        btnStart.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (selectedParts.isEmpty()) {
-//                    // Thông báo cho người dùng chọn ít nhất một phần
-//                    return;
-//                }
-//                Collections.sort(selectedParts);
-//                // Tạo Intent để chuyển đến layout mới
-//                Intent intent = new Intent(MainActivityQuiz.this, Quiz.class);
-//                intent.putStringArrayListExtra("selectedParts", selectedParts);
-//                startActivity(intent);
-//            }
-//        });
+        Button btnStart = findViewById(R.id.btn_start);
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedParts.isEmpty()) {
+                    // Thông báo cho người dùng chọn ít nhất một phần
+                    return;
+                }
+                Collections.sort(selectedParts);
+                // Tạo Intent để chuyển đến layout mới
+                Intent intent = new Intent(MainActivityQuiz.this, Quiz.class);
+                intent.putStringArrayListExtra("selectedParts", selectedParts);
+                startActivity(intent);
+            }
+        });
 
         setupCheckBoxes();
 
