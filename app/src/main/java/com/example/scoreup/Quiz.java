@@ -58,41 +58,41 @@ public class Quiz extends AppCompatActivity {
 
 // Mảng các câu hỏi
         Question[] questions = {
-                new Question("Part 1", "What is the capital of France?", "London", "Berlin", "Madrid", "Paris", "Paris"),
-                new Question("Part 1", "Which river runs through Egypt?", "Nile", "Amazon", "Mississippi", "Thames", "Nile"),
-                new Question("Part 1", "What is the currency of Japan?", "Yuan", "Yen", "Dollar", "Won", "Yen"),
-                new Question("Part 1", "Which planet is known as the Red Planet?", "Mars", "Venus", "Saturn", "Jupiter", "Mars"),
-                new Question("Part 1", "Who wrote 'Romeo and Juliet'?", "Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen", "William Shakespeare"),
-                new Question("Part 2", "When was the Eiffel Tower built?", "1885", "1887", "1890", "1889", "1889"),
-                new Question("Part 2", "Which ocean is the largest?", "Indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Arctic Ocean", "Pacific Ocean"),
-                new Question("Part 2", "Who is the author of 'Pride and Prejudice'?", "Emily Bronte", "Jane Austen", "Charlotte Bronte", "Agatha Christie", "Jane Austen"),
-                new Question("Part 2", "Which country is known as the Land of the Rising Sun?", "China", "Vietnam", "Japan", "Korea", "Japan"),
-                new Question("Part 2", "Who discovered penicillin?", "Alexander Fleming", "Isaac Newton", "Albert Einstein", "Galileo Galilei", "Alexander Fleming"),
-                new Question("Part 3", "What is the capital of Australia?", "Melbourne", "Sydney", "Canberra", "Brisbane", "Canberra"),
-                new Question("Part 3", "Which gas do plants absorb from the atmosphere?", "Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen", "Carbon Dioxide"),
-                new Question("Part 3", "Who is known as the Father of Modern Physics?", "Albert Einstein", "Isaac Newton", "Galileo Galilei", "Niels Bohr", "Albert Einstein"),
-                new Question("Part 3", "Which is the largest mammal?", "Blue Whale", "Elephant", "Giraffe", "Hippopotamus", "Blue Whale"),
-                new Question("Part 3", "What is the chemical symbol for gold?", "Ag", "Au", "Hg", "Pb", "Au"),
-                new Question("Part 4", "Which is the longest river in the world?", "Amazon", "Nile", "Mississippi", "Yangtze", "Nile"),
-                new Question("Part 4", "Who painted the Mona Lisa?", "Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo", "Leonardo da Vinci"),
-                new Question("Part 4", "What is the currency of China?", "Won", "Yuan", "Yen", "Pound", "Yuan"),
-                new Question("Part 4", "Which planet is known as the Blue Planet?", "Earth", "Mars", "Jupiter", "Venus", "Earth"),
-                new Question("Part 4", "Who is the author of 'The Great Gatsby'?", "F. Scott Fitzgerald", "Ernest Hemingway", "George Orwell", "Charles Dickens", "F. Scott Fitzgerald"),
-                new Question("Part 5", "What is the chemical symbol for oxygen?", "O", "Au", "Ag", "Hg", "O"),
-                new Question("Part 5", "Who was the first President of the United States?", "Abraham Lincoln", "John F. Kennedy", "Thomas Jefferson", "George Washington", "George Washington"),
-                new Question("Part 5", "What is the capital of Brazil?", "Rio de Janeiro", "Sao Paulo", "Brasilia", "Salvador", "Brasilia"),
-                new Question("Part 5", "Which country is known as the Land of the Midnight Sun?", "Sweden", "Norway", "Finland", "Denmark", "Norway"),
-                new Question("Part 5", "Who wrote 'The Odyssey'?", "Homer", "Virgil", "Dante", "Shakespeare", "Homer"),
-                new Question("Part 6", "What is the capital of Canada?", "Toronto", "Vancouver", "Ottawa", "Montreal", "Ottawa"),
-                new Question("Part 6", "Which gas do humans breathe out?", "Oxygen", "Carbon Dioxide", "Nitrogen", "Helium", "Carbon Dioxide"),
-                new Question("Part 6", "Who discovered electricity?", "Thomas Edison", "Nikola Tesla", "Benjamin Franklin", "Michael Faraday", "Benjamin Franklin"),
-                new Question("Part 6", "Which is the largest planet in our solar system?", "Mars", "Venus", "Jupiter", "Saturn", "Jupiter"),
-                new Question("Part 6", "Who wrote 'To Kill a Mockingbird'?", "John Steinbeck", "Ernest Hemingway", "Mark Twain", "Harper Lee", "Harper Lee"),
-                new Question("Part 7", "What is the capital of South Africa?", "Cape Town", "Johannesburg", "Durban", "Pretoria", "Pretoria"),
-                new Question("Part 7", "Who discovered the theory of relativity?", "Isaac Newton", "Galileo Galilei", "Albert Einstein", "Stephen Hawking", "Albert Einstein"),
-                new Question("Part 7", "What is the currency of Russia?", "Ruble", "Yen", "Pound", "Dollar", "Ruble"),
-                new Question("Part 7", "Which is the smallest continent?", "Europe", "Asia", "Australia", "Antarctica", "Australia"),
-                new Question("Part 7", "Who wrote '1984'?", "George Orwell", "Aldous Huxley", "Ray Bradbury", "Ernest Hemingway", "George Orwell")
+//                new Question("Part 1", "What is the capital of France?", "London", "Berlin", "Madrid", "Paris", "Paris"),
+//                new Question("Part 1", "Which river runs through Egypt?", "Nile", "Amazon", "Mississippi", "Thames", "Nile"),
+//                new Question("Part 1", "What is the currency of Japan?", "Yuan", "Yen", "Dollar", "Won", "Yen"),
+//                new Question("Part 1", "Which planet is known as the Red Planet?", "Mars", "Venus", "Saturn", "Jupiter", "Mars"),
+//                new Question("Part 1", "Who wrote 'Romeo and Juliet'?", "Charles Dickens", "William Shakespeare", "Mark Twain", "Jane Austen", "William Shakespeare"),
+//                new Question("Part 2", "When was the Eiffel Tower built?", "1885", "1887", "1890", "1889", "1889"),
+//                new Question("Part 2", "Which ocean is the largest?", "Indian Ocean", "Pacific Ocean", "Atlantic Ocean", "Arctic Ocean", "Pacific Ocean"),
+//                new Question("Part 2", "Who is the author of 'Pride and Prejudice'?", "Emily Bronte", "Jane Austen", "Charlotte Bronte", "Agatha Christie", "Jane Austen"),
+//                new Question("Part 2", "Which country is known as the Land of the Rising Sun?", "China", "Vietnam", "Japan", "Korea", "Japan"),
+//                new Question("Part 2", "Who discovered penicillin?", "Alexander Fleming", "Isaac Newton", "Albert Einstein", "Galileo Galilei", "Alexander Fleming"),
+//                new Question("Part 3", "What is the capital of Australia?", "Melbourne", "Sydney", "Canberra", "Brisbane", "Canberra"),
+//                new Question("Part 3", "Which gas do plants absorb from the atmosphere?", "Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen", "Carbon Dioxide"),
+//                new Question("Part 3", "Who is known as the Father of Modern Physics?", "Albert Einstein", "Isaac Newton", "Galileo Galilei", "Niels Bohr", "Albert Einstein"),
+//                new Question("Part 3", "Which is the largest mammal?", "Blue Whale", "Elephant", "Giraffe", "Hippopotamus", "Blue Whale"),
+//                new Question("Part 3", "What is the chemical symbol for gold?", "Ag", "Au", "Hg", "Pb", "Au"),
+//                new Question("Part 4", "Which is the longest river in the world?", "Amazon", "Nile", "Mississippi", "Yangtze", "Nile"),
+//                new Question("Part 4", "Who painted the Mona Lisa?", "Vincent van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo", "Leonardo da Vinci"),
+//                new Question("Part 4", "What is the currency of China?", "Won", "Yuan", "Yen", "Pound", "Yuan"),
+//                new Question("Part 4", "Which planet is known as the Blue Planet?", "Earth", "Mars", "Jupiter", "Venus", "Earth"),
+//                new Question("Part 4", "Who is the author of 'The Great Gatsby'?", "F. Scott Fitzgerald", "Ernest Hemingway", "George Orwell", "Charles Dickens", "F. Scott Fitzgerald"),
+//                new Question("Part 5", "What is the chemical symbol for oxygen?", "O", "Au", "Ag", "Hg", "O"),
+//                new Question("Part 5", "Who was the first President of the United States?", "Abraham Lincoln", "John F. Kennedy", "Thomas Jefferson", "George Washington", "George Washington"),
+//                new Question("Part 5", "What is the capital of Brazil?", "Rio de Janeiro", "Sao Paulo", "Brasilia", "Salvador", "Brasilia"),
+//                new Question("Part 5", "Which country is known as the Land of the Midnight Sun?", "Sweden", "Norway", "Finland", "Denmark", "Norway"),
+//                new Question("Part 5", "Who wrote 'The Odyssey'?", "Homer", "Virgil", "Dante", "Shakespeare", "Homer"),
+//                new Question("Part 6", "What is the capital of Canada?", "Toronto", "Vancouver", "Ottawa", "Montreal", "Ottawa"),
+//                new Question("Part 6", "Which gas do humans breathe out?", "Oxygen", "Carbon Dioxide", "Nitrogen", "Helium", "Carbon Dioxide"),
+//                new Question("Part 6", "Who discovered electricity?", "Thomas Edison", "Nikola Tesla", "Benjamin Franklin", "Michael Faraday", "Benjamin Franklin"),
+//                new Question("Part 6", "Which is the largest planet in our solar system?", "Mars", "Venus", "Jupiter", "Saturn", "Jupiter"),
+//                new Question("Part 6", "Who wrote 'To Kill a Mockingbird'?", "John Steinbeck", "Ernest Hemingway", "Mark Twain", "Harper Lee", "Harper Lee"),
+//                new Question("Part 7", "What is the capital of South Africa?", "Cape Town", "Johannesburg", "Durban", "Pretoria", "Pretoria"),
+//                new Question("Part 7", "Who discovered the theory of relativity?", "Isaac Newton", "Galileo Galilei", "Albert Einstein", "Stephen Hawking", "Albert Einstein"),
+//                new Question("Part 7", "What is the currency of Russia?", "Ruble", "Yen", "Pound", "Dollar", "Ruble"),
+//                new Question("Part 7", "Which is the smallest continent?", "Europe", "Asia", "Australia", "Antarctica", "Australia"),
+//                new Question("Part 7", "Who wrote '1984'?", "George Orwell", "Aldous Huxley", "Ray Bradbury", "Ernest Hemingway", "George Orwell")
         };
 
         for (Question question : questions) {
@@ -224,10 +224,23 @@ public class Quiz extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.navigation_view);
         Menu menu = navigationView.getMenu();
         SubMenu selectedPartsSubMenu = menu.addSubMenu("Selected Parts");
+
         for (String part : selectedParts) {
-            selectedPartsSubMenu.add(part);
+            MenuItem partItem = selectedPartsSubMenu.add(part).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                @Override
+                public boolean onMenuItemClick(MenuItem item) {
+                    // Hiển thị toast thông báo part đang được chọn
+                    Toast.makeText(getApplicationContext(), item.getTitle() + " is selected", Toast.LENGTH_SHORT).show();
+                    loadQuestionsForPart((String) item.getTitle());
+                    return true;
+                }
+            });
+
+            // Thêm 5 checkboxes tương ứng dưới mỗi part
+
         }
     }
+
 
     private void loadQuestionsForPart(String part) {
         cursor = dbHelper.getQuestionsForPart(part);
