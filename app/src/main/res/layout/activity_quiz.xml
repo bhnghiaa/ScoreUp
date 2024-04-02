@@ -20,7 +20,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@drawable/header_gradient"
-                android:paddingHorizontal="10dp"
+                android:paddingHorizontal="30dp"
                 android:paddingVertical="20dp">
 
                 <ImageButton
@@ -91,9 +91,12 @@
                 android:padding="16dp">
 
                 <TextView
+                    android:id="@+id/question"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
                     android:text="1 to 6" />
 
                 <TextView
@@ -103,8 +106,9 @@
                     android:text="Question"
                     android:textSize="20sp"
                     android:textColor="@color/black"
-                    android:gravity="center"
-                    android:textStyle="bold" />
+                    android:paddingHorizontal="15dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start" />
 
                 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                     android:layout_width="match_parent"
@@ -121,6 +125,7 @@
                         android:layout_height="wrap_content"
                         android:text="Option 1"
                         android:layout_marginBottom="5dp"
+                        android:gravity="start|center"
                         android:onClick="onOptionSelected" />
 
                     <Button
@@ -128,6 +133,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Option 2"
+                        android:gravity="start|center"
                         android:layout_marginBottom="5dp"
                         android:onClick="onOptionSelected" />
 
@@ -136,6 +142,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Option 3"
+                        android:gravity="start|center"
                         android:layout_marginBottom="5dp"
                         android:onClick="onOptionSelected" />
 
@@ -144,6 +151,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Option 4"
+                        android:gravity="start|center"
                         android:layout_marginBottom="5dp"
                         android:onClick="onOptionSelected" />
 
@@ -187,6 +195,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
+            android:foregroundGravity="left"
             app:headerLayout="@layout/nav_header"
             app:menu="@menu/menu_main"
             app:itemIconTint="@color/navigation_icon_color"

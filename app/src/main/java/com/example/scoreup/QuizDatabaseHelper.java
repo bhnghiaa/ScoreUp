@@ -66,6 +66,50 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getQuestionsForPart(String part) {
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_PART + "=?", new String[]{part});
+        String limit;
+
+        switch (part) {
+            case "Part 1":
+                limit = "7";
+                break;
+            case "Part 2":
+                limit = "26";
+                break;
+            case "Part 3":
+                limit = "40";
+                break;
+            case "Part 4":
+                limit = "31";
+                break;
+            case "Part 5":
+                limit = "31";
+                break;
+            case "Part 6":
+                limit = "17";
+                break;
+            case "Part 7":
+                limit = "55";
+                break;
+            default:
+                limit = "0";
+                break;
+        }
+
+        Cursor cursor = null;
+        if (!limit.equals("0")) {
+            cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_PART + "=? ORDER BY RANDOM() LIMIT " + limit, new String[]{part});
+        }
+
+        return cursor;
+    }
+
+
+    public boolean moveToPosition(Cursor cursor, int position) {
+        if (cursor == null || position < 0 || position >= cursor.getCount()) {
+            return false;
+        }
+
+        cursor.moveToPosition(position);
+        return true;
     }
 }
