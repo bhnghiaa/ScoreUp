@@ -2,6 +2,7 @@ package com.example.scoreup;
 public class Question {
     private int id;
     private String part;
+    private String context;
     private String question;
     private String option1;
     private String option2;
@@ -13,8 +14,9 @@ public class Question {
         // Constructor mặc định
     }
 
-    public Question(String part, String question, String option1, String option2, String option3, String option4, String answer) {
+    public Question(String part, String context, String question, String option1, String option2, String option3, String option4, String answer) {
         this.part = part;
+        this.context = context;
         this.question = question;
         this.option1 = option1;
         this.option2 = option2;
@@ -38,6 +40,14 @@ public class Question {
 
     public void setPart(String part) {
         this.part = part;
+    }
+
+    public String getContext() {
+        return context;
+    }
+
+    public void setContext(String context) {
+        this.context = context;
     }
 
     public String getQuestion() {

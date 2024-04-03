@@ -16,6 +16,7 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME = "questions";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_PART = "part";
+    public static final String COLUMN_CONTEXT = "context";
     public static final String COLUMN_QUESTION = "question";
     public static final String COLUMN_OPTION1 = "option1";
     public static final String COLUMN_OPTION2 = "option2";
@@ -26,6 +27,7 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
     private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " ("
             + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COLUMN_PART + " TEXT,"
+            + COLUMN_CONTEXT + " TEXT,"
             + COLUMN_QUESTION + " TEXT,"
             + COLUMN_OPTION1 + " TEXT,"
             + COLUMN_OPTION2 + " TEXT,"
@@ -53,6 +55,7 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_PART, question.getPart());
+        values.put(COLUMN_CONTEXT, question.getPart());
         values.put(COLUMN_QUESTION, question.getQuestion());
         values.put(COLUMN_OPTION1, question.getOption1());
         values.put(COLUMN_OPTION2, question.getOption2());

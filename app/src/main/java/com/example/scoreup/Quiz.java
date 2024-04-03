@@ -360,11 +360,7 @@ public class Quiz extends AppCompatActivity {
             String option2 = cursor.getString(cursor.getColumnIndexOrThrow(QuizDatabaseHelper.COLUMN_OPTION2));
             String option3 = cursor.getString(cursor.getColumnIndexOrThrow(QuizDatabaseHelper.COLUMN_OPTION3));
             String option4 = cursor.getString(cursor.getColumnIndexOrThrow(QuizDatabaseHelper.COLUMN_OPTION4));
-//            if(currentQuestionIndex == 0) {
-//                question.setText("Question " + String.valueOf(currentQuestionIndex + 1) + ": ");
-//            } else {
                 question.setText("Question " + String.valueOf(currentQuestionIndex) + ": ");
-
 
             question_textview.setText(Html.fromHtml(questionText.toString()), TextView.BufferType.SPANNABLE);
             option1Button.setText(option1);
@@ -476,11 +472,10 @@ public class Quiz extends AppCompatActivity {
                                 String answerB = question.getJSONObject("properties").getJSONObject("B").getJSONArray("rich_text").getJSONObject(0).getJSONObject("text").getString("content");
                                 String answerC = question.getJSONObject("properties").getJSONObject("C").getJSONArray("rich_text").getJSONObject(0).getJSONObject("text").getString("content");
                                 String answerD = question.getJSONObject("properties").getJSONObject("D").getJSONArray("rich_text").getJSONObject(0).getJSONObject("text").getString("content");
-//                                Question questionss = new Question( "Part 5" , questionText.toString(), answerA.toString(), answerB.toString(), answerC.toString(), answerD.toString(), answerA.toString());
-//                                dbHelper.addQuestion(questionss);
+                                Question questionss = new Question( "Part 5" ,null ,questionText.toString(), answerA.toString(), answerB.toString(), answerC.toString(), answerD.toString(), answerA.toString());
+                                dbHelper.addQuestion(questionss);
                             }
                         }
-
                         runOnUiThread(() -> question_textview.setText(Html.fromHtml(questionsInfo.toString()), TextView.BufferType.SPANNABLE));
                     } catch (JSONException e) {
                         e.printStackTrace();
