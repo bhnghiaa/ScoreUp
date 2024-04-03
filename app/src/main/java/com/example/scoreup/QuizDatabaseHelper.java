@@ -16,6 +16,7 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
     public static final String TABLE_NAME = "questions";
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_PART = "part";
+    public static final String COLUMN_CONTEXT = "context";
     public static final String COLUMN_QUESTION = "question";
     public static final String COLUMN_OPTION1 = "option1";
     public static final String COLUMN_OPTION2 = "option2";
@@ -26,6 +27,7 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
     private static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " ("
             + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + COLUMN_PART + " TEXT,"
+            + COLUMN_CONTEXT + " TEXT,"
             + COLUMN_QUESTION + " TEXT,"
             + COLUMN_OPTION1 + " TEXT,"
             + COLUMN_OPTION2 + " TEXT,"
@@ -53,6 +55,7 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_PART, question.getPart());
+        values.put(COLUMN_CONTEXT, question.getPart());
         values.put(COLUMN_QUESTION, question.getQuestion());
         values.put(COLUMN_OPTION1, question.getOption1());
         values.put(COLUMN_OPTION2, question.getOption2());
@@ -66,6 +69,50 @@ public class QuizDatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getQuestionsForPart(String part) {
         SQLiteDatabase db = this.getReadableDatabase();
-        return db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_PART + "=?", new String[]{part});
+        String limit;
+
+        switch (part) {
+            case "Part 1":
+                limit = "7";
+                break;
+            case "Part 2":
+                limit = "26";
+                break;
+            case "Part 3":
+                limit = "40";
+                break;
+            case "Part 4":
+                limit = "31";
+                break;
+            case "Part 5":
+                limit = "31";
+                break;
+            case "Part 6":
+                limit = "17";
+                break;
+            case "Part 7":
+                limit = "55";
+                break;
+            default:
+                limit = "0";
+                break;
+        }
+
+        Cursor cursor = null;
+        if (!limit.equals("0")) {
+            cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + COLUMN_PART + "=? ORDER BY RANDOM() LIMIT " + limit, new String[]{part});
+        }
+
+        return cursor;
+    }
+
+
+    public boolean moveToPosition(Cursor cursor, int position) {
+        if (cursor == null || position < 0 || position >= cursor.getCount()) {
+            return false;
+        }
+
+        cursor.moveToPosition(position);
+        return true;
     }
 }
