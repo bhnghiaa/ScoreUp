@@ -118,39 +118,6 @@
                     <!--                        android:text="6" />-->
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    >
-
-                    <ImageView
-                        android:id="@+id/imgQuestion"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                         />
-
-                    <FrameLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/border_radius"
-                        >
-
-                        <ScrollView
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:id="@+id/scroll"
-                            android:padding="5dp"
-                            >
-
-                            <TextView
-                                android:id="@+id/txtReading"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                 />
-                        </ScrollView>
-                    </FrameLayout>
-                </LinearLayout>
 
                 <TextView
                     android:id="@+id/question_textview"

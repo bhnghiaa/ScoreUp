@@ -5,6 +5,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -66,6 +67,14 @@ public class Quiz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        Button btn_Finish = findViewById(R.id.btn_Finish);
+        btn_Finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Quiz.this,ResultActivity.class);
+                startActivity(intent);
+            }
+        });
 
         selectedParts = getIntent().getStringArrayListExtra("selectedParts");
         if (selectedParts == null || selectedParts.isEmpty()) {
@@ -141,9 +150,8 @@ public class Quiz extends AppCompatActivity {
         option2Button.setTextColor(Color.BLACK);
         option3Button.setTextColor(Color.BLACK);
         option4Button.setTextColor(Color.BLACK);
-        ScrollView scrollView = findViewById(R.id.scroll);
-        TextView txtReading = findViewById(R.id.txtReading);
-        txtReading.setText(R.string.crepe);
+
+
 
 
 
@@ -158,7 +166,7 @@ public class Quiz extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 moveToNextQuestion();
-                scrollView.setVisibility(v.GONE);
+
             }
         });
         option1Button.setOnClickListener(new View.OnClickListener() {
