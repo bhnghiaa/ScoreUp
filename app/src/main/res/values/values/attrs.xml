@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Định nghĩa các thuộc tính tùy chỉnh cho các view -->
+    <declare-styleable name="CustomView">
+        <!-- Thuộc tính tùy chỉnh để điều chỉnh trạng thái hiển thị của view -->
+        <attr name="visibility" format="enum">
+            <!-- Hiển thị view -->
+            <enum name="visible" value="0" />
+            <!-- Ẩn view nhưng vẫn chiếm không gian -->
+            <enum name="invisible" value="1" />
+            <!-- Ẩn view và không chiếm không gian -->
+            <enum name="gone" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- MenuItem cho Selected Parts -->
+    <item
+        android:id="@+id/menu_selected_parts"
+        android:title="Selected Parts"
+        app:actionLayout="@menu/custom_menu_item"
+        android:gravity="start|center_vertical">
+
+        <!-- Submenu cho Selected Parts -->
+        <menu>
+            <!-- Sử dụng id này để thêm các MenuItem từ code Java -->
+        </menu>
+    </item>
+
+</menu>
